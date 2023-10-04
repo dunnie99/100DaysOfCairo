@@ -18,7 +18,7 @@ Welcome to my hundred (100) days of diving into #STARKNET CAIRO.
 
 ## Cairo Programming Language
 
-## DAY 1
+## DAY 1 Variable and Immutability
 In Cairo, memory is treated as immutable by default, meaning once you store something in a memory cell,you can't change it directly. Variables in Cairo follow this immutability rule by default, which means once you assign a value to a variable, you can't change it. This is because changing values that are supposed to be constant can lead to eeror in code.
 
 ```
