@@ -213,6 +213,17 @@ Adding items to the array is like placing a new item at the end of the line, and
 
 In Cairo programming, we cannot change what's already in the array, only keep adding new items to the end and taking out items from the front. Reshuffling the order without altering the contents.
 
+## DAY 18 Reading Array.
+
+An array is like a list of items and we can use two methods to read this list.
+1. get(): This method checks if an element is in the list at a specific position. It returns the element if it does exist else, returns none. It doesn't cause errors if the position is empty.
+
+2. at(): This method directly gives what's in the list at a specific position. But if the element is not there, it panics(can cause errors).
+Basically, if you use get(), you're being careful. If you use at(), you're saying, "I'm sure it's there."
+
+len():  returns nunber of element.
+is_empty(): It checks if the array is empty and returns true or false.
+Span: A "span" is like taking a picture of the array which you can't change. It's useful to keep the array safe and make sure it doesn't get tampered with. A array can be turned into a span by calling span() on it.
 
 
 
