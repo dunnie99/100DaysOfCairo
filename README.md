@@ -223,9 +223,33 @@ Basically, if you use get(), you're being careful. If you use at(), you're sayin
 
 len():  returns nunber of element.
 is_empty(): It checks if the array is empty and returns true or false.
-Span: A "span" is like taking a picture of the array which you can't change. It's useful to keep the array safe and make sure it doesn't get tampered with. A array can be turned into a span by calling span() on it.
+Span: is like taking a picture of the array which you can't change. It's useful to keep the array safe and make sure it doesn't get tampered with. A array can be turned into a span by calling ```span()``` on it.
+
+## DAY 19 Dictionaries.
+
+Cairo provides a special kind of data structure called ```Felt252Dict<T>```, which is like a map in other programming languages. It involves having a collection of pairs, where each pair has a unique key and when we need to overwrite a memory, even though you can't really change the memory in Cairo.
+
+1. To add something to a dictionary, you use insert(key, value). E.g writing a word and its meaning in a dictionary.
+
+2. To get something from a dictionary, you use get(key). E.g looking up a word to find its meaning in a dictionary.
 
 
+## DAY 20 
+
+🚀 Day 20 of #100DaysOfCairo #Data_types
+#Cairo Felt252Dict Entries:
+
+Let's take Felt252Dict<T> as a list of records, and each record has three pieces of information:
+
+1. Key: This is a label for the value in the dictionary, like a word in a real dictionary. 
+2. Previous Value: This is the value associated with the key before any changes.
+3. New Value: This is the new value associated with the key after changes.
+So, every time we do something with Felt252Dict<T>, like reading, updating, or writing, a new record is created to remember what happened.
+
+How Entries Work:
+
+When we read from the dictionary, an entry is created with the same previous and new values because nothing changed.
+When a new value is inserted, an entry is created with the new value that is being added and the previous value is the last thing that was there (or zero if it's the first time).
 
 
 
