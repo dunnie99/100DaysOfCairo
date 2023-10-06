@@ -159,9 +159,59 @@ So, functions are like tasks, and parameters are the details you give to those t
 
 
 
+## DAY 13 Functions Return Values
+Functions can process data and also give us back some data. When a function gives back data, we say it "returns" a value.
+In #Cairo, we declare the type of the return value using an arrow '->' followed by the type, E.g, 
+```
+fn add(x: u32, y: u32) -> u32.
+```
+The return value of a function is usually the result of the last expression in its body. So, we don't have to explicitly say "return," it just knows that the last thing calculated is what should be given back.
+E.g, if a function has 2 as the last thing it does, it returns 2.
+
+NB : Do not to put a semicolon (;) at the end of the line when returning a value. Else, it becomes a statement, not an expression, and that can cause an error.
+i.e
+```x + 1 is an expression that returns a value, but x + 1; with a semicolon becomes a statement and doesn't return anything.```
+Cairo is smart enough to know what the answer is without us saying "return" explicitly and don't put semicolons at the end of an expression, or it might cause errors.
+
+## DAY 14 Control Flow (IF/ELSE).
+Two basic tools for control flow are ```if``` expressions and loops. An ```if``` expression helps make decisions in cairo, "If this condition is true, do this; otherwise, do something else."
+It starts with the word "if" followed by a condition in parentheses, and the code to run if the condition is true inside curly braces ```{}```. An ```else``` part can also be added with different code to run if the condition is false.
+
+```E.g: Let's say a variable number = 3. we can use an "if" expression to check if number is equal to 5. If it is, print "condition was true," otherwise, print "condition was false."```
+
+There can be more than one condition by using ```else if``` after the initial ```if```.
+It's like saying, "If this condition is true, do this;
+
+otherwise, if another condition is true, do something else."
+```E.g: number = 3, check if it's 12, if not, check if it's 3```, and so on. Cairo stops checking as soon as it finds a true condition.
+
+NB: The condition must be a yes-or-no question (true or false). Cairo executes only the first true condition in an ```if-else if``` chain.
 
 
+## DAY 15 Control Flow (LOOPS).
 
+Sometimes, we want a piece of code to run over and over. Cairo provides a simple way to do this with a loop.
+The ```loop``` keyword tells Cairo to keep running a block of code
+i.e ```use it to create a loop that runs forever or until a certain condition is met.```
+For instance, you can have a loop that counts from 0 to 10 and prints "again!" each time.
+Most loops have a stop condition to prevent them from running forever, like using the ```break``` statement to exit the loop when the condition is met.
+
+
+## DAY 16 Control Flow (Controlling Loop Execution:).
+The ```continue``` statement is used to skip the rest of the code in an iteration and move to the next one. i.e, we can skip printing when a certain condition is met.
+
+Loops can also return values and to pass a value out of the loop, we use the ```break``` statement with a value. This value will be returned when the loop stops, and can be used later in the code.
+That's how to make code repeat tasks and even return results from loops in Cairo.
+
+
+## DAY 17 Arrays
+
+An ```array``` is like a one-way street where we can only add new things at the end and remove things from the front. Also once something is placed in the array, it cannot be changed but can read what's stored in it.
+
+When creating an ```array```, we specify the type of data it will hold, like specifying whether it will hold ```bool``` or ```felt252```.
+Adding items to the array is like placing a new item at the end of the line, and removing items from the array is taking out the first item in the line.
+
+In Cairo programming, we cannot change what's already in the array, only keep adding new items to the end and taking out items from the front. Reshuffling the order without altering the contents.
 
 
 
