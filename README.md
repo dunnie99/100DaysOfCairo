@@ -234,10 +234,7 @@ Cairo provides a special kind of data structure called ```Felt252Dict<T>```, whi
 2. To get something from a dictionary, you use get(key). E.g looking up a word to find its meaning in a dictionary.
 
 
-## DAY 20 
-
-🚀 Day 20 of #100DaysOfCairo #Data_types
-#Cairo Felt252Dict Entries:
+## DAY 20  Felt252Dict Entries.
 
 Let's take Felt252Dict<T> as a list of records, and each record has three pieces of information:
 
