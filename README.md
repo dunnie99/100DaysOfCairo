@@ -259,7 +259,13 @@ NB: Felt252Dict<T> does not support all types, and some complex types like array
 
 To work with these types, we can wrap them using a type called Nullable<T>
 
+## DAY 22 Ownership & Variable Scope.
 
+Every value in a program is owned by a single variable. Only one variable can "own" a value at any given time. If another variable takes ownership, the original variable can no longer access that value. When the variable that owns a value goes out of scope (i.e., is no longer active or accessible in the current part of the code), the value it holds is automatically dropped or discarded.
+
+Variable Scope: A variable becomes active (or "comes into scope") from the point where it's declared in the program. As long as the variable is within its declared scope, it can be accessed, and its value can be used or modified.
+
+At the end of the declared variable's  scope, the variable becomes inactive (or "goes out of scope"), and it can no longer be used.The value owned by that variable is dropped.
 
 
 
