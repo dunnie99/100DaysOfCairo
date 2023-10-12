@@ -249,7 +249,15 @@ When we read from the dictionary, an entry is created with the same previous and
 When a new value is inserted, an entry is created with the new value that is being added and the previous value is the last thing that was there (or zero if it's the first time).
 
 
+## DAY 21 Squashing Dictionaries
 
+To make sure a program that uses Felt252Dict<T> is correct, we need to check that the dictionary hasn't been tampered with illegally during runtime by "squashing the dictionary." This basically means reviewing each dictionary entry, and making sure that access to the dictionary remains constant while executing the program.
+
+Squashing Process: It involves checking entries in the dictionary with the same key and verifying that the new value for the 'i-th' entry matches the previous value for the 'i+1-th' entry. If any value in the dictionary changes illegally, the squashing process will fail during runtime.
+
+NB: Felt252Dict<T> does not support all types, and some complex types like arrays and structs are not directly supported.
+
+To work with these types, we can wrap them using a type called Nullable<T>
 
 
 
